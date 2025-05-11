@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aws_training_db
+    username: postgres
+    password: trainingpw!2$iloveit
+  sql:
+    init:
+      mode: always

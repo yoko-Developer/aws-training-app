@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message List</title>
+</head>
+<body>
+    <h1>Message</h1>
+
+    <!-- Reloadボタン（リンクとして） -->
+    <a href="list">
+        <button type="button">Reload</button>
+    </a>
+
+    <!-- メッセージ表示 -->
+    <ul>
+        <li th:each="message : ${messages}">
+            <span th:text="${message.msg}"></span>
+        </li>
+    </ul>
+
+    <!-- メッセージ追加フォーム -->
+    <form action="add" method="post">
+        <input type="text" name="msg" placeholder="Enter a message">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

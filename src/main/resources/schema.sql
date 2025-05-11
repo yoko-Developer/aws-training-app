@@ -1,0 +1,5 @@
+DROP TABLE if exists t_msg CASCADE;
+CREATE TABLE t_msg (
+    id SERIAL PRIMARY KEY,
+    msg VARCHAR(255) NOT NULL
+);

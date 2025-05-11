@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  # ################################################################################
+  # Database
+  # ################################################################################
+  postgres:
+    image: postgres:17.2
+    container_name: aws_training_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=aws_training_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d

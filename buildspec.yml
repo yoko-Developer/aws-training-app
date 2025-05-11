@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+    commands:
+      - java --version
+  pre_build:
+    commands:
+      - yum update -y
+  build:
+    commands:
+      - chmod 755 ./gradlew
+      - ./gradlew clean bootWar
+      - ls -la build/
+  post_build:
+    commands:
+      - ls -la
+artifacts:
+  files:
+    - build/libs/app.war
+    - appspec.yml

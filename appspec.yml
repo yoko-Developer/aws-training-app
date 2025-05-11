@@ -1,0 +1,5 @@
+version: 0.0
+os: linux
+files:
+  - source: build/libs/app.war
+    destination: /opt/apache-tomcat/webapps
