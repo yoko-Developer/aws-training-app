@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/aws_training_db
+    url: jdbc:postgresql://yoko-aws-training-db.ckpru3dte42n.ap-northeast-1.rds.amazonaws.com:5432/aws_training_db
     username: postgres
     password: trainingpw!2$iloveit
   sql:
